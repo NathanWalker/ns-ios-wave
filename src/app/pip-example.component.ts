@@ -1,6 +1,6 @@
 import { Component, NO_ERRORS_SCHEMA } from "@angular/core";
 import { NativeScriptCommonModule } from "@nativescript/angular";
-import { AbsoluteLayout, EventData, Screen, View } from "@nativescript/core";
+import { AbsoluteLayout, EventData, PanGestureEventData, Screen, View } from "@nativescript/core";
 
 @Component({
   selector: "ns-pip-example",
@@ -11,6 +11,14 @@ import { AbsoluteLayout, EventData, Screen, View } from "@nativescript/core";
 export class PIPExampleComponent {
   container: AbsoluteLayout;
   pipWaveAnimator = PIPWaveAnimator.shared;
+
+  pan(args: PanGestureEventData) {
+    const recognizer = args.ios as UIPanGestureRecognizer;
+    this.pipWaveAnimator.handlePanWithSenderView(
+      recognizer,
+      this.container.ios as UIView
+    );
+  }
 
   loaded(args: EventData) {
     const view = args.object as View;
@@ -43,13 +51,5 @@ export class PIPExampleComponent {
         view.translateY = Screen.mainScreen.heightDIPs - 188;
         break;
     }
-  }
-
-  pan(args) {
-    const recognizer = args.ios as UIPanGestureRecognizer;
-    this.pipWaveAnimator.handlePanWithSenderView(
-      recognizer,
-      this.container.ios as UIView
-    );
   }
 }
