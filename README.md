@@ -31,4 +31,4 @@ ns debug ios
 
 This blends custom UIViews found in [native-views](src/app/native-views/), registered in [app.component](src/app/app.component.ts) into the [layout here](src/app/pip-example.component.html).
 
-The pan gesture is blended into [TypeScript here](src/app/pip-example.component.ts) to call the Swift [handleTap event here](App_Resources/iOS/src/PIPWaveAnimator.swift).
+The pan gesture is blended into [TypeScript here](src/app/pip-example.component.ts) to call the Swift [handlePan event here](App_Resources/iOS/src/PIPWaveAnimator.swift).
