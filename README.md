@@ -1,6 +1,6 @@
 ## Example using NativeScript with Wave
 
-[Wave](https://github.com/jtrivedi/Wave), a spring-based animation engine for iOS, iPadOS, and macOS, make by [Janum Trivedi](https://github.com/jtrivedi).
+[Wave](https://github.com/jtrivedi/Wave), a spring-based animation engine for iOS, iPadOS, and macOS, made by [Janum Trivedi](https://github.com/jtrivedi).
 
 https://github.com/user-attachments/assets/efdaf0f8-dd0f-4121-8818-53212b33f961
 
