@@ -1,0 +1,14 @@
+<AbsoluteLayout
+  iosOverflowSafeAreaEnabled="false"
+  (loaded)="loadedContainer($event)"
+>
+  @for (drop of [1,2,3,4]; track $index) {
+  <DottedBorderView (loaded)="loadedDropZone($event, drop)" />
+  }
+
+  <PIPView
+    class="w-[120] h-[80]"
+    (pan)="pan($event)"
+    (loaded)="loaded($event)"
+  />
+</AbsoluteLayout>
